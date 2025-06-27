@@ -297,3 +297,104 @@ ul {
 .btn-github img {
     width: 105px;
 }
+
+
+/* — Robot Development & Implementation 섹션 — */
+
+#robot-development {
+    margin: 4em auto;
+    max-width: 975px;
+}
+
+#robot-development h1 {
+    font-size: 1.75em;
+    margin-bottom: 1em;
+}
+
+
+/* 3열 그리드 */
+
+.robot-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5%;
+}
+
+
+/* 카드 스타일 (Technical skill 과 유사한 hover 효과) */
+
+.robot-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    /* 이미지 위, 텍스트 아래 고정 */
+    color: #333332;
+    flex: 0 0 32%;
+    background: rgba(0, 0, 0, .02);
+    border-radius: 5px;
+    padding: 1em;
+    text-decoration: none;
+    transition: background .3s, transform .2s;
+}
+
+.robot-item:hover {
+    background: #3498db;
+    /* 파란색 강조 */
+    transform: translateY(-4px);
+    /* 살짝 떠오르기 */
+    color: #fff;
+    /* 텍스트를 흰색으로 바꾸면 가독성↑ */
+}
+
+ㄴ
+/* 이미지 영역은 flex 상단에 */
+
+.robot-item img {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: .75em;
+}
+
+
+/* 텍스트 영역은 flex 하단에 */
+
+.robot-item h3 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+
+/* 공통 스타일 */
+
+.robot-img {
+    display: block;
+    margin: 0 auto 0.75em;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+
+/* 각 로봇별 크기 조절 */
+
+.robot-img.explorer {
+    width: 180px;
+    /* 첫 번째 로봇 이미지를 120px 너비로 */
+    height: auto;
+}
+
+.robot-img.delivery {
+    width: 200px;
+    /* 두 번째 로봇 이미지를 100px 너비로 */
+    height: auto;
+}
+
+.robot-img.survey {
+    width: 140px;
+    /* 세 번째 로봇 이미지를 140px 너비로 */
+    height: auto;
+}
