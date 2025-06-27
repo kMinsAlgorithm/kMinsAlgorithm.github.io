@@ -56,7 +56,8 @@ h1 {
     width: 85%;
 }
 
-.me-img {
+
+/* .me-img {
     background: url(https://media-exp1.licdn.com/dms/image/C4E03AQGnLq_IB_mf8Q/profile-displayphoto-shrink_400_400/0/1631022739752?e=1648684800&v=beta&t=eICUjHeH_g9GQEItmEMK1j2gCADwqfjrlccSD_5za58) no-repeat center center;
     background-size: 100%;
     background-position: 0px;
@@ -65,6 +66,18 @@ h1 {
     margin: 0 auto;
     position: relative;
     width: 150px;
+} */
+
+.me-img {
+    width: 220px;
+    height: 220px;
+    background: url('./imgs/Kim_profile.jpg') no-repeat center center;
+    background-size: cover;
+    /* 사진을 꽉 채워 잘라냄 */
+    border-radius: 04%;
+    /* 원형으로 만들기 */
+    margin: 0 auto;
+    position: relative;
 }
 
 .name-hero h1 {
@@ -180,4 +193,77 @@ ul {
     body {
         font-size: 14px;
     }
+}
+
+
+/* — Publications 섹션 — */
+
+#publications {
+    margin: 4em auto;
+    max-width: 975px;
+}
+
+#publications h1 {
+    font-size: 1.75em;
+    margin-bottom: 0.25em;
+}
+
+#publications p em {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+.pub-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 2.5em 0;
+}
+
+.pub-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 1.5em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.pub-content h2 {
+    font-size: 1.3em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.pub-content .authors {
+    margin: 0.3em 0;
+    font-weight: 500;
+}
+
+.pub-content .author-primary {
+    color: #8e44ad;
+    /* 강조할 저자에 원하는 색 적용 */
+}
+
+.pub-content .venue {
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.4em;
+}
+
+.pub-content .links a {
+    margin-right: 0.6em;
+    text-decoration: none;
+    font-size: 0.95em;
+    color: #3498db;
+}
+
+.pub-content .links a:hover {
+    text-decoration: underline;
+}
+
+.pub-content .desc {
+    margin-top: 0.7em;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
 }
