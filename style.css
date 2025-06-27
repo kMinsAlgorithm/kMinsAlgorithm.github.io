@@ -215,16 +215,21 @@ ul {
 }
 
 .pub-item {
-    display: flex;
-    align-items: flex-start;
-    margin: 2.5em 0;
+    display: block;
+    /* flex 제거 */
+    margin: 3.0em 0;
+    overflow: auto;
+    /* float된 자식 요소를 포함시키기 위해 */
 }
 
 .pub-item img {
-    width: 180px;
-    height: 180px;
+    float: left;
+    /* 왼쪽으로 띄우기 */
+    width: 200px;
+    height: auto;
     object-fit: cover;
-    margin-right: 1.5em;
+    margin: 0 1.5em 1em 0;
+    /* 우측과 하단 여백 */
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 }
@@ -348,7 +353,7 @@ ul {
     /* 텍스트를 흰색으로 바꾸면 가독성↑ */
 }
 
-ㄴ
+
 /* 이미지 영역은 flex 상단에 */
 
 .robot-item img {
@@ -397,4 +402,23 @@ ul {
     width: 180px;
     /* 세 번째 로봇 이미지를 140px 너비로 */
     height: auto;
+}
+
+.bullet-indent {
+    /* 왼쪽 여백 만큼 들여쓰기 */
+    margin-left: 1.5em;
+    /* 본문 행 들여쓰기(첫 줄 제외) 방지 */
+    text-indent: 0;
+    /* 줄간격 필요시 조정 */
+    line-height: 1.5;
+    /* (선택) 글자 크기나 색상 추가 조정 가능 */
+}
+
+.bullet-indent::before {
+    content: "•";
+    /* 앞에 찍을 기호 */
+    /* 기호와 텍스트 간 간격 */
+    margin-right: 0.5em;
+    /* 기호를 기준으로 정렬(숫자/문단 위치에 맞춰) */
+    vertical-align: text-top;
 }
