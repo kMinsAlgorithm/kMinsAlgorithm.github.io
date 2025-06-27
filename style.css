@@ -267,3 +267,33 @@ ul {
     color: rgba(0, 0, 0, 0.8);
     line-height: 1.5;
 }
+
+.action-buttons {
+    text-align: center;
+    margin-top: -0em;
+    /* 필요에 따라 위쪽 여백 조정 */
+    align-items: center;
+    justify-content: center;
+}
+
+.action-buttons a {
+    display: inline-block;
+    margin: 0 0.25em;
+    /* 버튼 간 간격 */
+}
+
+.action-buttons img {
+    display: block;
+    width: 160px;
+    /* 원하는 버튼 너비 */
+    height: auto;
+}
+
+.btn-download img {
+    width: 95px;
+    margin-top: -3.9em;
+}
+
+.btn-github img {
+    width: 105px;
+}
