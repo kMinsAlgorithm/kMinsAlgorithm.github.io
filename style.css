@@ -240,6 +240,24 @@ ul {
     line-height: 1.2;
 }
 
+#publications .pub-content h2 a {
+    color: inherit;
+    /* 기본 텍스트 색상 유지 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    transition: color .25s ease, text-decoration .25s ease;
+}
+
+
+/* Hover 시 컬러와 밑줄 효과 */
+
+#publications .pub-content h2 a:hover {
+    color: #3498db;
+    /* 원하는 강조색 */
+    text-decoration: underline;
+    /* 밑줄 추가 */
+}
+
 .pub-content .authors {
     margin: 0.3em 0;
     font-weight: 500;
