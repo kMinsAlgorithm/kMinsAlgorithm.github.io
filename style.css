@@ -240,19 +240,19 @@ ul {
     line-height: 1.2;
 }
 
-.pub-content h2 a {
-    color: inherit;
-    /* 기본 텍스트 색상 유지 */
-    text-decoration: none;
+#publications .pub-content h2 a {
+    color: inherit !important;
+    /* 부모 색상 물려받고 */
+    text-decoration: none !important;
     /* 밑줄 제거 */
-    transition: color .25s ease, text-decoration .25s ease;
 }
 
-.pub-content h2 a:hover {
-    color: #3498db;
-    /* 원하는 강조색 */
-    text-decoration: underline;
-    /* 밑줄 추가 */
+
+/* 마우스 올렸을 때만 적용 */
+
+#publications .pub-content h2 a:hover {
+    color: #3498db !important;
+    text-decoration: underline !important;
 }
 
 
