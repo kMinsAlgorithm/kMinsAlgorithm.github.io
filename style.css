@@ -12,7 +12,7 @@ body {
     -webkit-font-smoothing: antialiased;
     color: #333332;
     font-family: Lora, serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 1.4;
     text-rendering: optimizeLegibility;
@@ -458,3 +458,36 @@ ul {
   color: rgba(0,0,0,0.6);
   margin-top: 0.5em;
 }
+.robot-gif-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 5px;
+  margin: 1em 0;
+}
+
+.robot-gif {
+  width: 45% !important;
+  text-align: center;
+}
+
+.robot-gif img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto auto;
+}
+
+.robot-gifs {
+  /* width: 45% !important; */
+  text-align: center;
+}
+
+.robot-gifs img {
+  max-width: 100%;
+  width: 100% !important;
+  height: auto;
+  display: block;
+  margin: auto auto;
+}
+
