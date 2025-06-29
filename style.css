@@ -443,7 +443,7 @@ ul {
 
 /* 추가된 GIF 캡션 스타일 */
 .robot-gif-collection {
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .robot-gif-collection .robot-gif-row {
@@ -523,4 +523,5 @@ ul {
   background: #f0f0f0;
   border-color: #ccc;
 }
+
 
