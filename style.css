@@ -314,7 +314,7 @@ ul {
 
 .btn-download img {
     width: 95px;
-    margin-top: -3.9em;
+    margin-top: -3.2em;
 }
 
 .btn-github img {
@@ -489,5 +489,38 @@ ul {
   height: auto;
   display: block;
   margin: auto auto;
+}
+
+/* —————— 뒤로가기 버튼 —————— */
+.back-button {
+  text-align: center;   /* 가운데 배치 */
+  margin-top: 2em;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-back img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5em;
+}
+
+.btn-back span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  color: #333;
+}
+
+.btn-back:hover {
+  background: #f0f0f0;
+  border-color: #ccc;
 }
 
