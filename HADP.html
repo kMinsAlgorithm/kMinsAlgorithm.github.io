@@ -50,113 +50,34 @@
                         <h1>HADP: Hybrid A*-Diffusion Planner for Robust Navigation in Dynamic Obstacle Environments</h1>
 
                         
-<figure class="robot-gifs">
-                            <img src="./imgs/HADP_driving.gif" alt="Demo GIF"style="width: 100%; max-width: 800px;">
-                            <figcaption>Driving process of the proposed navigation system</figcaption>
-                        </figure>
-                        <p>
-                            Each roller is angled relative to
-                            the wheel’s axis of rotation, enabling smooth
-                            lateral movement. Thanks to this unique structure, a
-                            robot can move freely in any direction—360
-                            degrees—without changing its orientation. This
-                            enables excellent maneuverability and precise
-                            positioning, even in tight spaces.
-                        </p>
+                    <figure class="robot-gifs" style="margin-bottom: 3em;">
+                        <img src="./imgs/HADP_driving.gif" alt="Demo GIF" style="width: 100%; max-width: 800px;">
+                        <figcaption>Driving process of the proposed navigation system</figcaption>
+                    </figure>
 
-                        <p style="text-align:center;">
-                            \[
-                            \begin{pmatrix}
-                            u_1\\[6pt]
-                            u_2\\[6pt]
-                            u_3
-                            \end{pmatrix}
-                            =
-                            \frac{1}{r}
-                            \begin{pmatrix}
-                            -d & 1 & 0 \\[4pt]
-                            -d & -\tfrac12 & -\sin\!\bigl(\tfrac{\pi}{3}\bigr)
-                            \\[4pt]
-                            -d & -\tfrac12 & +\sin\!\bigl(\tfrac{\pi}{3}\bigr)
-                            \end{pmatrix}
-                            \begin{pmatrix}
-                            \omega_{bz}\\[4pt]
-                            v_{bx}\\[4pt]
-                            v_{by}
-                            \end{pmatrix}
-                            \]
-                        </p>
-                        <ul style="padding-left:20px;">
-                            <p class="bullet-indent">
-                                <strong>r</strong>: Wheel radius</li>
-                            </p>
-                            <p class="bullet-indent">
-                                <strong>d</strong>: Distance from the robot’s    center to each wheel</li>
-                            </p>
-                            <p class="bullet-indent">
-                                <strong>Wheel mounting angles</strong>: \( \beta_1 = 0,\;\beta_2 = -\frac{2\pi}{3},\;\beta_3 = +\frac{2\pi}{3} \)</li>
-                            </p>
-                            <p class="bullet-indent">
-                                <strong>u<sub>i</sub></strong>: Rotational speed assigned to each wheel</li>
-                            </p>
-                            
-                        </ul>
-  <p>The value of \(u_i\) obtained from the equation is normalized using a scaling factor and converted into a PWM signal, with the sign determining the rotation direction of each motor.
-</li></p>
-<figure class="robot-gifs">
-                            <img src="./imgs/omni_wheel_motion2.gif" alt="Demo GIF"style="width: 100%; max-width: 500px;">
-                            <figcaption>Demonstration of omni-wheel-based motion</figcaption>
-                        </figure>
-                     
+                    <!-- <p style="font-size: 28px; color: #000;">
+                        <strong>ABSTRACT</strong>
+                    </p> -->
 
-
-                        <p>
-       This omni-wheel robot was the first complete robotic system through which I directly experienced every stage from design and fabrication to communication, firmware development, simulation, and real-world testing. 
-
-By handling everything from hardware configuration and sensor data collection to control algorithm tuning and ROS integration, I built a solid foundation in robotics.
-                        </p>
-                        
-                        <div class="robot-gif-row">
-                            <figure class="robot-gif">
-                                <img src="./imgs/Omni_design.gif"
-                                    alt="Swerve Fusion Demo"
-                                    style="width: 200%; max-width: 350px;">
-                                <!-- <figcaption>Swerve Fusion Demo</figcaption> -->
-                            </figure>
-                            <figure class="robot-gif">
-                                <img src="./imgs/omni_robot_pic.jpg"
-                                    alt="Gazebo Simulation Demo"
-                                    style="width: 150%; max-width: 350px;">
-                                <!-- <figcaption>Gazebo Simulation Demo</figcaption> -->
-                            </figure>
-                        </div>
-
-<p>Through building the hardware, collecting sensor data, tuning control algorithms, and integrating with ROS, I gained foundational skills in robotics.</p>
-                        
-<figure class="robot-gifs">
-                            <img src="./imgs/omni_drl_nav.gif" alt="Demo GIF"style="width: 100%; max-width: 500px;">
-                            <figcaption>Demonstration of DRL-based navigation system</figcaption>
-                        </figure>
-                 
-<p>This robot was initially developed as part of an undergraduate capstone design project and later served as a testbed for reinforcement learning research. </p>
-<figure class="robot-gifs">
-                            <img src="./imgs/omni_drl.gif" alt="Demo GIF"style="width: 100%; max-width: 500px;">
-                            <!-- <figcaption>Demonstration of DRL-based navigation system</figcaption> -->
-                        </figure>
-<p>After training the policy in a simulator, we transferred it to the real robot (simulation-to-reality) and compared the performance in autonomous navigation. </p>
-
-<p>Through the process of designing reward functions and configuring environments, I gained practical insights into various aspects of autonomous control research.</p> 
-                        <p>
-                            GitHub: ver1 <a
-                                href="https://github.com/kMinsAlgorithm/ProjectUSAE"
-                                target="_blank">https://github.com/kMinsAlgorithm/ProjectUSAE</a>
-                        </p>
-                        <p>
-                            GitHub: ver2<a
-                                href="https://github.com/kMinsAlgorithm/OmniWheelRobot"
-                                target="_blank">https://github.com/kMinsAlgorithm/OmniWheelRobot</a>
-                        </p>
-
+                    <p class="bullet-indent">
+                        Learning-based navigation methods enable rapid perception and safe decision-making in dynamic obstacle environments but demand vast amounts of diverse scenario data to achieve robust generalization.
+                    </p>
+                    <p class="bullet-indent">
+                        Unlike conventional methods that predict single-step action policies, diffusion-based trajectory generation can produce path-level action policies—enabling smoother, more effective driving by planning whole trajectories at once.
+                    </p>
+                    <p class="bullet-indent">
+                        We propose the  <strong>Hybrid A*-Diffusion Planner (HADP)</strong>, which integrates A* search for global planning with conditional diffusion-based path planning for local obstacle avoidance.
+                    </p>
+                    <p class="bullet-indent">
+                        <strong>In obstacle-free regions</strong>, HADP uses A* for optimal global path planning.
+                    </p>
+                    <p class="bullet-indent">
+                        <strong>When a dynamic obstacle enters a predefined boundary</strong>, the system builds a semantic map and, conditioned on this map plus the robot’s pose and local goal, invokes a diffusion model to generate a local avoidance path then, after avoidance, re-plans globally with A*.
+                    </p>
+                    <p class="bullet-indent">
+                        We conducted comparative experiments in both SEEN and UNSEEN environments against other learning-based navigation methods to demonstrate HADP’s superiority, and the results showed that HADP achieved the highest success rates in both settings.
+                    </p>
+                    
                     </section>
                     <div class="back-button-wrapper">
                         <a href="./index.html" class="btn-back">
