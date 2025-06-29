@@ -1,58 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Mingyu Kim - CV</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light" rel="stylesheet" type="text/css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mingyu Kim - CV</title>
+        <link rel="stylesheet" href="style.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light"
+            rel="stylesheet" type="text/css">
+    </head>
 
-<body>
-    <div class="wrapper clearfix">
-        <div class="left">
-            <div class="name-hero">
-                <div class="me-img"></div>
-                <div class="name-text">
-                    <h1>Mingyu <em>Kim</em></h1>
-                    <!-- <p>10 Iroquois St Boston, MA 02120</p> -->
-                    <p>k012123600@gmail.com</p>
-                    <p>20-02-2001</p>
-                    <div class="action-buttons">
-                        <ul class="skill-set">
-                            <a class="btn-download" href="./Mingyu_Kim_s_CV.pdf" download>
-                                <img src="./imgs/cv_down.png" alt="Download CV">
-                            </a>
-                            <a class="btn-github" href="https://github.com/kMinsAlgorithm" target="_blank" rel="noopener">
-                                <img src="./imgs/github_icon.png" alt="GitHub Profile">
-                            </a>
+    <body>
+        <div class="wrapper clearfix">
+            <div class="left">
+                <div class="name-hero">
+                    <div class="me-img"></div>
+                    <div class="name-text">
+                        <h1>Mingyu <em>Kim</em></h1>
+                        <!-- <p>10 Iroquois St Boston, MA 02120</p> -->
+                        <p>k012123600@gmail.com</p>
+                        <p>20-02-2001</p>
+                        <div class="action-buttons">
+                            <ul class="skill-set">
+                                <a class="btn-download"
+                                    href="./Mingyu_Kim_s_CV.pdf" download>
+                                    <img src="./imgs/cv_down.png"
+                                        alt="Download CV">
+                                </a>
+                                <a class="btn-github"
+                                    href="https://github.com/kMinsAlgorithm"
+                                    target="_blank" rel="noopener">
+                                    <img src="./imgs/github_icon.png"
+                                        alt="GitHub Profile">
+                                </a>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="right">
-            <div class="inner">
+            <div class="right">
+                <div class="inner">
 
-                <section>
-                    <h1>Swerve-Drive Robot</h1>
-                    <p>Thank you for visiting my profile page. </p>
-                    <p>
-                        I am a M.S. candidate in Information and Communication Engineering at Myongji University (MJU), advised by Prof.
-                        <a href="https://ds.mju.ac.kr/professor.html" target="_blank" rel="noopener">
-                        Jaehee Jung
-                      </a>.
-                    </p>
-                    <p>My master's research focused on enhancing dynamic obstacle avoidance performance in mobile robot navigation by leveraging deep learning models to process semantic information and generate human-like trajectories based on imitation
-                        learning. The key research directions I plan to pursue include:</p>
+                    <section>
+                        <h1>Swerve-Drive Robot</h1>
+                        <p>
+                            A swerve drive is an advanced wheel configuration in
+                            which each wheel module can rotate independently and
+                            drive under its enabling omnidirectional
+                            movement, zero-radius turns, and exceptional
+                            maneuverability.
+                        </p>
 
+                        <figure class="robot-gifs">
+                            <img src="./imgs/ swerve1.gif" alt="Demo GIF">
+                            <figcaption>Demonstration of Swerve Drive
+                                Motion</figcaption>
+                        </figure>
+                        <p>
+                            In this project, we designed three custom swerve
+                            modules, each equipped with a motor for steering
+                            and
+                            another for propulsion.
+                        </p>
 
-                </section>
+                        <p>
+                            The orientation of each drive module is measured
+                            using an angle sensor, and its steering motor is
+                            controlled by a PID controller to accurately
+                            achieve
+                            the target angle.
+                        </p>
+                        <div class="robot-gif-row">
+                            <figure class="robot-gif">
+                                <img src="./imgs/fusion.gif"
+                                    alt="Swerve Fusion Demo">
+                                <!-- <figcaption>Swerve Fusion Demo</figcaption> -->
+                            </figure>
+                            <figure class="robot-gif">
+                                <img src="./imgs/swerve_design.png"
+                                    alt="Gazebo Simulation Demo"
+                                    style="width: 150%; max-width: 350px;">
+                                <!-- <figcaption>Gazebo Simulation Demo</figcaption> -->
+                            </figure>
+                        </div>
 
+                        <p>
+                            An Arduino Mega simultaneously computes the
+                            steering
+                            angles and wheel speeds to perform real-time
+                            odometry estimation.
+
+                            It then publishes the odometry messages over the
+                            CAN
+                            bus in real time.
+
+                            The entire system is operated under the ROS 2
+                            framework.
+                        </p>
+
+                        <figure class="robot-gifs">
+                            <img src="./imgs/control_structure.png"
+                                alt="Demo GIF"
+                                style="width: 120%;">
+                            <figcaption>System Architecture for Swerve Drive
+                                Control</figcaption>
+                        </figure>
+                        <p>
+                            This work was carried out as part of my M.S.
+                            research and was supported by a National
+                            Research
+                            Foundation of Korea (NRF) <strong>"Semantic
+                                Autonomous Driving Systems Utilizing Diffusion
+                                Models for Enhanced Dynamic Obstacle Avoidance
+                                Performance"</strong>.
+                        </p>
+
+                        <p>
+                            The primary objective was to develop
+                            a highly agile mobile platform for dynamic
+                            obstacle
+                            avoidance and precise indoor navigation
+                            experiments.
+                            <a href="HADP.html">
+                                HADP:
+                            </a>.
+                        </p>
+                        <div class="robot-gif-row">
+                            <figure class="robot-gif">
+                                <img src="./imgs/swerve_nav1.gif"
+                                    alt="Swerve Fusion Demo"
+                                    style="width: 110%;">
+                                <!-- <figcaption>Swerve Fusion Demo</figcaption> -->
+                            </figure>
+                            <figure class="robot-gif">
+                                <img src="./imgs/swerve_nav2.gif"
+                                    alt="Gazebo Simulation Demo"
+                                    style="width: 110%;">
+                                <!-- <figcaption>Gazebo Simulation Demo</figcaption> -->
+                            </figure>
+                        </div>
+
+                        <p>
+                            We also implemented the swerve drive motion in
+                            the
+                            <strong>Gazebo simulation environment</strong>,
+                            which was used to
+                            train the learning-based path planning system in
+                            a
+                            simulated environment
+                        </p>
+
+                        <p>
+                            GitHub: <a
+                                href="https://github.com/yourusername/swerve-drive-robot"
+                                target="_blank">https://github.com/yourusername/swerve-drive-robot</a>
+                        </p>
+                        <p>
+                            <strong>Demo Video:</strong> <a
+                                href="https://youtu.be/yourvideoid"
+                                target="_blank">https://youtu.be/yourvideoid</a>
+                        </p>
+
+                    </section>
+
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>

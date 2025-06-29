@@ -440,3 +440,21 @@ ul {
     /* 기호를 기준으로 정렬(숫자/문단 위치에 맞춰) */
     vertical-align: text-top;
 }
+
+/* 추가된 GIF 캡션 스타일 */
+.robot-gif-collection {
+  margin: 2em 0;
+}
+
+.robot-gif-collection .robot-gif-row {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.robot-gif-collection figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgba(0,0,0,0.6);
+  margin-top: 0.5em;
+}
