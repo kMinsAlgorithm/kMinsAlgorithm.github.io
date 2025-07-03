@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Mingyu Kim - CV</title>
-        <link rel="stylesheet" href="style.css">
-        <link
-            href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light"
-            rel="stylesheet" type="text/css">
-        <script
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-            async></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Mingyu Kim - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 
-    </head>
+</head>
 
-    <body>
-        <div class="wrapper clearfix">
-            <div class="left">
-                <div class="name-hero">
-                    <div class="me-img"></div>
-                    <div class="name-text">
-                        <h1>Mingyu <em>Kim</em></h1>
-                        <!-- <p>10 Iroquois St Boston, MA 02120</p> -->
-                        <p>k012123600@gmail.com</p>
-                        <p>20-02-2001</p>
-                        <div class="action-buttons">
-                            <ul class="skill-set">
-                                <a class="btn-download"
-                                    href="./Mingyu_Kim_s_CV.pdf" download>
-                                    <img src="./imgs/cv_down.png"
-                                        alt="Download CV">
-                                </a>
-                                <a class="btn-github"
-                                    href="https://github.com/kMinsAlgorithm"
-                                    target="_blank" rel="noopener">
-                                    <img src="./imgs/github_icon.png"
-                                        alt="GitHub Profile">
-                                </a>
+<body>
+    <div class="wrapper clearfix">
+        <div class="left">
+            <div class="name-hero">
+                <div class="me-img"></div>
+                <div class="name-text">
+                    <h1>Mingyu <em>Kim</em></h1>
+                    <!-- <p>10 Iroquois St Boston, MA 02120</p> -->
+                    <p>k012123600@gmail.com</p>
+                    <p>20-02-2001</p>
+                    <div class="action-buttons">
+                        <ul class="skill-set">
+                            <a class="btn-download" href="./Mingyu_Kim_s_CV.pdf" download>
+                                <img src="./imgs/cv_down.png" alt="Download CV">
+                            </a>
+                            <a class="btn-github" href="https://github.com/kMinsAlgorithm" target="_blank" rel="noopener">
+                                <img src="./imgs/github_icon.png" alt="GitHub Profile">
+                            </a>
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="inner">
+        </div>
+        <div class="right">
+            <div class="inner">
 
-                    <section>
-                        <h1>HADP: Hybrid A*-Diffusion Planner for Robust Navigation in Dynamic Obstacle Environments</h1>
+                <section>
+                    <h1>HADP: Hybrid A*-Diffusion Planner for Robust Navigation in Dynamic Obstacle Environments</h1>
 
-                        
+
                     <figure class="robot-gifs" style="margin-bottom: 3em;">
                         <img src="./imgs/HADP_driving.gif" alt="Demo GIF" style="width: 100%; max-width: 800px;">
                         <figcaption>Driving process of the proposed navigation system</figcaption>
@@ -66,29 +57,38 @@
                         Unlike conventional methods that predict single-step action policies, diffusion-based trajectory generation can produce path-level action policies—enabling smoother, more effective driving by planning whole trajectories at once.
                     </p>
                     <p class="bullet-indent">
-                        We propose the  <strong>Hybrid A*-Diffusion Planner (HADP)</strong>, which integrates A* search for global planning with conditional diffusion-based path planning for local obstacle avoidance.
+                        We propose the <strong>Hybrid A*-Diffusion Planner (HADP)</strong>, which integrates A* search for global planning with conditional diffusion-based path planning for local obstacle avoidance.
                     </p>
                     <p class="bullet-indent">
                         <strong>In obstacle-free regions</strong>, HADP uses A* for optimal global path planning.
                     </p>
                     <p class="bullet-indent">
-                        <strong>When a dynamic obstacle enters a predefined boundary</strong>, the system builds a semantic map and, conditioned on this map plus the robot’s pose and local goal, invokes a diffusion model to generate a local avoidance path then, after avoidance, re-plans globally with A*.
+                        <strong>When a dynamic obstacle enters a predefined boundary</strong>, the system builds a semantic map and, conditioned on this map plus the robot’s pose and local goal, invokes a diffusion model to generate a local avoidance
+                        path then, after avoidance, re-plans globally with A*.
                     </p>
                     <p class="bullet-indent">
                         We conducted comparative experiments in both SEEN and UNSEEN environments against other learning-based navigation methods to demonstrate HADP’s superiority, and the results showed that HADP achieved the highest success rates in both settings.
                     </p>
-                    
-                    </section>
-                    <div class="back-button-wrapper">
-                        <a href="./index.html" class="btn-back">
-                            <!-- <img src="./imgs/arrow_left.png" alt="Back"> -->
-                            <span>Back</span>
-                        </a>
-                    </div>
+
+                    <figure class="robot-gifs" style="margin-bottom: 3em;">
+                        <img src="./imgs/hadp_real.gif" alt="Demo GIF" style="width: 100%; max-width: 600px;">
+                        <figcaption>Driving process of the proposed navigation system</figcaption>
+                    </figure>
+                    <p class="bullet-indent">
+                        Furthermore, the effectiveness of the proposed method was validated through real-world robot experiments.
+                    </p>
+
+                </section>
+                <div class="back-button-wrapper">
+                    <a href="./index.html" class="btn-back">
+                        <!-- <img src="./imgs/arrow_left.png" alt="Back"> -->
+                        <span>Back</span>
+                    </a>
                 </div>
             </div>
-
         </div>
-    </body>
+
+    </div>
+</body>
 
 </html>
