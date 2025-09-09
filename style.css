@@ -548,3 +548,12 @@ ul {
   font-size: 0.8rem;
   color: #333;
 }
+.small-link {
+  font-size: 1.0rem;
+  margin-left: 8px;
+  color: #004aad;
+  text-decoration: none;
+}
+.small-link:hover {
+  text-decoration: underline;
+}
