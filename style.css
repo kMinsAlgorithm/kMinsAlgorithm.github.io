@@ -261,6 +261,7 @@ ul {
 .pub-content .authors {
     margin: 0.3em 0;
     font-weight: 500;
+    font-size: 0.9em;
 }
 
 .pub-content .author-primary {
@@ -272,6 +273,8 @@ ul {
     font-style: italic;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 0.4em;
+    font-size: 0.9em;
+    /* 상대 크기 */
 }
 
 .pub-content .links a {
@@ -531,29 +534,33 @@ ul {
 }
 
 .venue {
-  font-size: 1.3rem;
-  color: #555;
-  margin: 0.5em 0;
-  font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0.5em 0;
+    font-family: "Open Sans", sans-serif;
 }
+
 .venue .journal {
-  font-weight: 600;
-  color: #222;
+    font-weight: 600;
+    color: #222;
 }
+
 .venue .impact {
-  margin-left: 0.5em;
-  padding: 2px 6px;
-  background: #f0f2f5;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  color: #333;
+    margin-left: 0.5em;
+    padding: 2px 6px;
+    background: #f0f2f5;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #333;
 }
+
 .small-link {
-  font-size: 1.0rem;
-  margin-left: 8px;
-  color: #004aad;
-  text-decoration: none;
+    font-size: 1.0rem;
+    margin-left: 8px;
+    color: #004aad;
+    text-decoration: none;
 }
+
 .small-link:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
