@@ -564,3 +564,73 @@ ul {
 .small-link:hover {
     text-decoration: underline;
 }
+
+/* --- News Section --- */
+#news {
+    margin: 4em auto;
+    max-width: 975px;
+}
+
+#news h1 {
+    font-size: 1.75em;
+    margin-bottom: 0.75em;
+    color: #222;
+}
+
+.news-list {
+    max-width: none;   /* 570px 제한 해제 */
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0.9em 0;
+    line-height: 1.6;
+    padding-left: 1.2em;
+    position: relative;
+
+    /* ✅ 줄넘김 개선 */
+    white-space: normal;         /* 긴 문장도 자동 줄바꿈 */
+    word-break: keep-all;        /* 단어 단위로 줄바꿈 (영문+한글 자연스러움) */
+    overflow-wrap: break-word;   /* 너무 긴 단어만 줄바꿈 */
+    width: 100%;                 /* 전체 너비 활용 */
+    display: block;              /* inline-block 제한 해제 */
+}
+
+.news-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* 강조 포인트 */
+.highlight {
+    color: #004aad;
+    font-weight: 600;
+}
+
+/* Rejected 표시 */
+.rejected {
+    color: #c0392b;
+    font-weight: 600;
+}
+
+/* Gradus 링크 스타일 */
+.gradus-link {
+    color: #004aad;              /* 기존 강조색과 일관성 */
+    font-weight: 600;
+    text-decoration: none;       /* 밑줄 제거 */
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.gradus-link:hover {
+    color: #007bff;              /* hover 시 살짝 밝은 파랑 */
+    text-decoration: underline;  /* hover 시 밑줄 표시 */
+}
