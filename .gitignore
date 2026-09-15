@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# 편집기
+.vscode/
+.idea/
+*.swp
+*~
+
+# 로컬 도구 설정
+.claude/
+
+# 작업용 파일 (커밋 대상 아님)
+minoid_page_questions.md
+
+# 압축본(imgs/minoid_demo_web.gif)으로 대체된 원본.
+# 37MB라 저장소에 넣지 않음. 로컬 보관용.
+imgs/minoid_demo.gif
