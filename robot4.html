@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minoid Semi-Humanoid Robot | Mingyu Kim</title>
+    <link rel="stylesheet" href="style.css?v=20260915-3">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="left">
+            <div class="name-hero">
+                <div class="me-img"></div>
+                <div class="name-text">
+                    <h1>Mingyu <em>Kim</em></h1>
+                    <p>k0136000@postech.ac.kr</p>
+                    <div class="action-buttons">
+                        <ul class="skill-set">
+                            <a class="btn-download" href="./Mingyu_Kim_s_CV.pdf" download>
+                                <img src="./imgs/cv_down.png" alt="Download CV">
+                            </a>
+                            <a class="btn-github" href="https://github.com/kMinsAlgorithm" target="_blank" rel="noopener">
+                                <img src="./imgs/github_icon.png" alt="GitHub Profile">
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="inner">
+                <section>
+                    <h1>Minoid Semi-Humanoid Robot</h1>
+
+                    <p>
+                        Minoid is a personal project: a semi-humanoid upper-body robot built as a research platform for
+                        Vision-Language-Action (VLA) models, and eventually as a testbed for building benchmarks around them.
+                        The name is taken from my own.
+                    </p>
+
+                    <p>
+                        The constraint that shaped the entire design was <strong>cost</strong>. The goal was not the highest
+                        specification, but the most capable platform reachable at a price one person can carry — a decision that
+                        propagated into the actuator selection, the fabrication method, and the choice to build the software
+                        stack myself rather than buy it.
+                    </p>
+
+                    <figure class="robot-gifs">
+                        <img src="./imgs/minoid_demo_web.gif" alt="Real-time following demo in MuJoCo" style="width: 100%; max-width: 500px;">
+                        <figcaption>Real-time following, implemented in the custom controller and run in MuJoCo</figcaption>
+                    </figure>
+
+                    <p>
+                        In its current form the robot has <strong>13 actuated joints</strong> — four per arm, three in the waist,
+                        and two in the neck. The wrist is still being designed; once it is finished, each arm will carry
+                        <strong>seven degrees of freedom</strong>. The waist provides yaw, pitch, and roll, and the neck is a
+                        pan-tilt pair. Structural parts combine aluminium profile, 3D-printed components, and CNC machining,
+                        and the joints are driven by ROBSTRIDE series actuators together with EaglePower motors — selected,
+                        again, because they were the most affordable option that met the requirement.
+                    </p>
+
+                    <figure class="robot-gifs">
+                        <img src="./imgs/manipulator_version_v80.png" alt="Mechanical design of the Minoid semi-humanoid robot" style="width: 100%; max-width: 500px;">
+                        <figcaption>Mechanical design of the Minoid upper body</figcaption>
+                    </figure>
+
+                    <p>
+                        For perception, the current design places one camera in the head and one in the chest, with two more
+                        planned at each end-effector once the wrist and gripper are settled. A gripper design is still under
+                        consideration.
+                    </p>
+
+                    <p>
+                        Minoid is fixed-base today, but not by intention. The upper body is meant to be mounted on the
+                        <a href="robot3.html">differential-drive platform</a> I built earlier, so that the robot can actually move.
+                        Keeping the base static for now separates the manipulation problem from the navigation problem and lets
+                        each be solved on its own terms.
+                    </p>
+
+                    <p>
+                        Rather than working inside RViz, I wrote a dedicated controller for this robot — a PySide/Qt3D
+                        application built for Minoid alone. It covers the operating modes the platform needs: single moves,
+                        waypoint sequences, dual-arm coordination, real-time following, and pick-and-place demonstrations,
+                        all on top of MoveIt-based planning. Because it is my own application rather than a general-purpose
+                        viewer, it is also where the hardware-facing work will live: homing sequences and per-actuator log
+                        visualization, once the physical robot is connected.
+                    </p>
+
+                    <!-- TODO: GUI 스크린샷을 imgs/minoid_gui.png 로 저장하면 아래 주석을 풀 것
+                    <figure class="robot-gifs">
+                        <img src="./imgs/minoid_gui.png" alt="Custom PySide/Qt3D controller for Minoid" style="width: 100%; max-width: 600px;">
+                        <figcaption>Custom controller: planning group and TCP selection, task profiles, and live state feedback</figcaption>
+                    </figure>
+                    -->
+
+                    <p>
+                        The same control stack runs against both MuJoCo and Gazebo through ROS 2. This is deliberate:
+                        before sim-to-real, a behavior should survive <strong>sim-to-sim</strong> — if it only works in one
+                        simulator, it was fitted to that simulator's artifacts rather than to the robot. Isaac Sim is planned
+                        as a third environment. Within simulation, MoveIt-based planning currently works as intended across
+                        the implemented features.
+                    </p>
+
+                    <p>
+                        One arm is assembled. The remaining parts are being sourced, the wiring harness is not yet built,
+                        the wrist is still on the drawing board, and completing the second arm requires another set of actuators.
+                        Matching the simulated model against real hardware has not been attempted yet; if direct matching turns
+                        out to be difficult, domain randomization is the fallback.
+                    </p>
+
+                    <p>
+                        The hardest problems so far have not been control problems. They have been cost, and the electrical
+                        design of a high-current system to feed the actuators — the part of a humanoid build that is easy to
+                        underestimate from the software side.
+                    </p>
+
+                    <p>
+                        The next milestone is mobility: once the upper body is joined to the mobile base, the platform can
+                        begin to support the VLA and VLN experiments it was built for.
+                    </p>
+                </section>
+
+                <div class="back-button-wrapper">
+                    <a href="./index.html" class="btn-back">
+                        <span>Back</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -177,9 +177,15 @@ ul {
         width: 100%;
         min-height: 500px;
     }
+    .inner a {
+        overflow-wrap: anywhere;
+    }
     .handmade {
         text-align: center !important;
         margin-top: 0px !important;
+    }
+    .robot-item {
+        flex: 0 0 100%;
     }
 }
 
@@ -296,16 +302,21 @@ ul {
 
 .action-buttons {
     text-align: center;
-    margin-top: -0em;
-    /* 필요에 따라 위쪽 여백 조정 */
+    margin-top: 0;
+}
+
+.action-buttons .skill-set {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5em;
+    margin: 0 auto;
+    max-width: none;
 }
 
 .action-buttons a {
     display: inline-block;
-    margin: 0 0.25em;
-    /* 버튼 간 간격 */
+    margin: 0;
 }
 
 .action-buttons img {
@@ -317,7 +328,7 @@ ul {
 
 .btn-download img {
     width: 95px;
-    margin-top: -3.2em;
+    margin-top: 0;
 }
 
 .btn-github img {
@@ -423,6 +434,18 @@ ul {
     width: 180px;
     /* 세 번째 로봇 이미지를 140px 너비로 */
     height: auto;
+}
+
+.robot-img.minoid {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 3열 레이아웃에서 마지막 한 장짜리 행은 가운데 정렬 */
+.robot-item:last-child:nth-child(3n + 1) {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bullet-indent {
